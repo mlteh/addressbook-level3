@@ -32,10 +32,7 @@ public class CommandResult {
     public Optional<List<? extends ReadOnlyPerson>> getRelevantPersons() {
         return Optional.ofNullable(relevantPersons);
     }
-    @Override // as copied from Command::execute()
-    public boolean isMutating(){
-    	return false;
-    }
+
 
 
 }

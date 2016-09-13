@@ -27,4 +27,10 @@ public class HelpCommand extends Command {
     public CommandResult execute() {
         return new CommandResult(MESSAGE_ALL_USAGES);
     }
+    
+    
+    @Override // as copied from Command::execute()
+    public boolean isMutating(){
+    	return false;
+    }
 }

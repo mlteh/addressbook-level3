@@ -23,6 +23,12 @@ public class DeleteCommand extends Command {
     public DeleteCommand(int targetVisibleIndex) {
         super(targetVisibleIndex);
     }
+    
+    @Override // as copied from Command::execute()
+    public boolean isMutating(){
+    	return true;
+    }
+
 
 
     @Override

@@ -24,7 +24,12 @@ public class ViewAllCommand extends Command {
         super(targetVisibleIndex);
     }
 
-
+    
+    @Override // as copied from Command::execute()
+    public boolean isMutating(){
+    	return false;
+    }
+    
     @Override
     public CommandResult execute() {
         try {

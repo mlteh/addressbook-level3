@@ -16,5 +16,11 @@ public class IncorrectCommand extends Command{
     public CommandResult execute() {
         return new CommandResult(feedbackToUser);
     }
+    
+    @Override // as copied from Command::execute()
+    public boolean isMutating(){
+    	return false;
+    }
+
 
 }

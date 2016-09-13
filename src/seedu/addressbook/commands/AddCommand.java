@@ -56,6 +56,11 @@ public class AddCommand extends Command {
     public ReadOnlyPerson getPerson() {
         return toAdd;
     }
+    
+    @Override // as copied from Command::execute()
+    public boolean isMutating(){
+    	return true;
+    }
 
     @Override
     public CommandResult execute() {
